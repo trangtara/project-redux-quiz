@@ -1,10 +1,9 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { quiz } from '../reducers/quiz'
-import Button from './Button'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { quiz } from '../reducers/quiz';
 
 const CurrentQuestion = () => {
-  const dispatch = useDispatch()
+// const dispatch = useDispatch()
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex])
 
   if (!question) {
@@ -14,10 +13,6 @@ const CurrentQuestion = () => {
   return (
     <div className="question__wrapper">
       <h2 className="question__header">Question: {question.questionText}</h2>
-      <Button
-        className="question__next-btn"
-        text="Next"
-        onClick={() => dispatch(quiz.actions.goToNextQuestion())} />
     </div>
   )
 };
