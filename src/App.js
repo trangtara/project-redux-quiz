@@ -12,7 +12,7 @@ const reducer = combineReducers({
   quiz: quiz.reducer
 });
 
-const store = configureStore({ reducer })
+const store = configureStore({ reducer });
 
 export const App = () => {
   return (
