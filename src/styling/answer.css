@@ -2,6 +2,7 @@
     justify-self: center;
     display: flex;
     flex-direction: column;
+    background:#012A52;
 }
 
 .answer__btn {
@@ -11,4 +12,5 @@
     margin: 5px;
     padding: 5px;
     font-size: 1.2em;
+    background: #2371A4;
 }

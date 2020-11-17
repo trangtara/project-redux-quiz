@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from './Button'
 
+import '../styling/summary.css'
+
 const SummaryPage = () => {
   return (
     <section className="summary__wrapper">
