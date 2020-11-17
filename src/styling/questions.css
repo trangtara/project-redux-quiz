@@ -1,0 +1,18 @@
+.question__wrapper {
+    justify-self: center;
+    text-align: center;
+    background: #F4F4F4;
+}
+.question__header {
+    font-size: 2em;
+}
+
+.question__next-btn {
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 1.2em;
+    background:#2371A4;
+}

@@ -1,0 +1,16 @@
+.answer__wrapper {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    background:#012A52;
+}
+
+.answer__btn {
+    border: none;
+    border-radius: 8px;
+    width: 250px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 1.2em;
+    background: #2371A4;
+}
