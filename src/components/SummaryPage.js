@@ -2,12 +2,15 @@ import React from 'react';
 
 import Button from './Button';
 import SummaryText from './SummaryText';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { quiz } from '../reducers/quiz'
 
 import '../styling/summary.css'
 
 const SummaryPage = () => {
   const isQuizOver = useSelector((state) => state.quiz.quizOver);
+  const dispatch = useDispatch();
+
   return (
     <>
       {isQuizOver 
@@ -15,7 +18,8 @@ const SummaryPage = () => {
         <SummaryText />
         <Button
           className="summary__btn"
-          text="Redo" />
+          text="Restart quiz"
+          onClick={() => dispatch(quiz.actions.restart())} />
       </section>}
     </>
   );
