@@ -7,6 +7,8 @@ import CurrentQuestion from './components/CurrentQuestion'
 import SummaryPage from './components/SummaryPage'
 import ProgressBar from './components/ProgressBar'
 
+import './styling/app.css'
+
 const reducer = combineReducers({
   quiz: quiz.reducer
 })
@@ -16,10 +18,12 @@ const store = configureStore({ reducer })
 export const App = () => {
   return (
     <Provider store={store}>
+      <main className="app__grid">
       <CurrentQuestion />
       <CurrentAnswers />
       <SummaryPage />
       <ProgressBar />
+      </main>
     </Provider>
   )
 }
