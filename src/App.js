@@ -4,7 +4,8 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { quiz } from 'reducers/quiz'
 import CurrentAnswers from './components/CurrentAnswers'
 import CurrentQuestion from './components/CurrentQuestion'
-import SummaryPage from 'components/SummaryPage'
+import SummaryPage from './components/SummaryPage'
+import ProgressBar from './components/ProgressBar'
 
 const reducer = combineReducers({
   quiz: quiz.reducer
@@ -18,6 +19,7 @@ export const App = () => {
       <CurrentQuestion />
       <CurrentAnswers />
       <SummaryPage />
+      <ProgressBar />
     </Provider>
   )
 }
