@@ -2,6 +2,7 @@
     justify-self: center;
     text-align: center;
     background: #F4F4F4;
+    padding: 10px;
 }
 .question__header {
     font-size: 2em;
@@ -11,8 +12,9 @@
     border: none;
     border-radius: 8px;
     width: 100px;
-    margin: 5px;
+    margin: 20px 0 0 5px;
     padding: 5px;
     font-size: 1.2em;
-    background:#2371A4;
+    border: 2px solid #2371A4;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
 }

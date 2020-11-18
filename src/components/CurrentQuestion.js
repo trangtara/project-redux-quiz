@@ -13,7 +13,7 @@ const CurrentQuestion = () => {
 
   return (
     <div className="question__wrapper">
-      <h2 className="question__header">Question: {question.questionText}</h2>
+      <h2 className="question__header">{question.questionText}?</h2>
     </div>
   );
 };
