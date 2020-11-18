@@ -13,8 +13,8 @@ const QuestionPage = () => {
     <>
       {!isQuizOver &&
       <>
-        <QuestionGif />
         <CurrentQuestion />
+        <QuestionGif />
         <CurrentAnswers />
         <ProgressBar />
       </>}

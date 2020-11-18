@@ -2,8 +2,11 @@ import { createSlice } from '@reduxjs/toolkit'
 
 // Change these to your own questions!
 const questions = [
-  { id: 1, cuisine: 'Spainish', questionText: 'Who set the Olympic record for the 100m dash in 2012?', options: ['Usain Bolt', 'Justin Gatlin', 'Tyson Gay', 'Asafa Powell'], correctAnswerIndex: 0, URL: 'https://media.giphy.com/media/Yxq7SC6yTAwZG/source.gif' },
-  { id: 2, cuisine: 'Italian', questionText: 'When was Michael Phelps last named male World Swimmer of the Year?', options: ['2012', '2014', '2016', '2018'], correctAnswerIndex: 2, URL: 'https://media.giphy.com/media/3oKIPqVJNVpXJDAqQg/giphy.gif' }
+  { id: 1, cuisine: 'Spanish', questionText: 'What did Jamie Oliver do to make the spanyards go berzerk', options: ['He suggested putting butter on bread', 'He made a twist on Paella, adding chorizo', 'He served his gazpacho warm'], correctAnswerIndex: 1, URL: '' },
+  { id: 2, cuisine: 'Japan', questionText: 'What is one of the most offensive things to do in Japan?', options: ['To not finish your food', 'To finish you food and put your utencils on the wrong side of the plate', 'To finish your food and ask for more'], correctAnswerIndex: 0, URL: '' },
+  { id: 3, cuisine: 'Italian', questionText: 'What will make an italian go crazy?', options: ['To cut your pasta into teeny tiny bits', 'To serve polenta to a stew', 'To offer the first sip of your wine to your dinner companion'], correctAnswerIndex: 0, URL: '' },
+  { id: 4, cuisine: 'France', questionText: 'What is a faux pas (big misstep) in France?', options: ['Adding sauce to your food', 'Following the breadiquette', 'Asking for more food'], correctAnswerIndex: 2, URL:'https://media.giphy.com/media/Yxq7SC6yTAwZG/source.gif'  },
+  { id: 5, cuisine: 'Portugal', questionText: 'What happens if you ask a portugese for salt and pepper?', options: ['You will get it straight away', 'You will get the boot straight away'], correctAnswerIndex: 1, URL: ''  }
 ]
 
 const initialState = {
