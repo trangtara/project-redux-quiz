@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { quiz } from '../reducers/quiz';
+// import { quiz } from '../reducers/quiz';
 
 const QuestionGif = () => {
   const gif = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex].URL);

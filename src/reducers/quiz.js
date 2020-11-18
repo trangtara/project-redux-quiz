@@ -80,7 +80,7 @@ export const quiz = createSlice({
 
     setScore: (state, action) => {
       const { increaseScore } = action.payload
-      if (increaseScore) { state.score += 1 } else { state.score -= 1 }
+      if (increaseScore) { state.score += 1 }
     },
 
     /**

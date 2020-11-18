@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import { quiz } from '../reducers/quiz'
+// import { quiz } from '../reducers/quiz'
 
 const SummaryText = () => {
   const answers = useSelector((state) => state.quiz.answers);

@@ -5,6 +5,7 @@ import QuestionGif from './QuestionGif';
 import CurrentQuestion from './CurrentQuestion';
 import CurrentAnswers from './CurrentAnswers';
 import ProgressBar from './ProgressBar';
+import Score from './Score';
 
 const QuestionPage = () => {
   const isQuizOver = useSelector((state) => state.quiz.quizOver);
@@ -13,6 +14,7 @@ const QuestionPage = () => {
     <>
       {!isQuizOver &&
       <>
+        <Score />
         <CurrentQuestion />
         <QuestionGif />
         <CurrentAnswers />

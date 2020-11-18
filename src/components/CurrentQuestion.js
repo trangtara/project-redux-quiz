@@ -1,10 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { quiz } from '../reducers/quiz';
+// import { quiz } from '../reducers/quiz';
 import '../styling/questions.css'
 
 const CurrentQuestion = () => {
-// const dispatch = useDispatch()
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex])
 
   if (!question) {
