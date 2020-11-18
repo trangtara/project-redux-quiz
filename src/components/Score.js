@@ -6,7 +6,7 @@ const Score = () => {
 
   return (
     <div className="score__wrapper">
-      <p className="score__text">{score} {score ===1 ? 'points' : 'point'}</p>
+      <p className="score__text">{score} {score === 1 ? 'point' : 'points'}</p>
     </div>
   )
 }
