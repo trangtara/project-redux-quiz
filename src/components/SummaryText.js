@@ -1,6 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
+import '../styling/summary.css'
+
 // import { quiz } from '../reducers/quiz'
 
 const SummaryText = () => {
@@ -10,15 +12,15 @@ const SummaryText = () => {
 
   return (
     <>
-      <h2 className="summary__header">You got {correctAnswers.length} out of {answers.length} points</h2>
+      <h2 className="summary__header">You scored <p className='summary__score'>{correctAnswers.length} out of {answers.length}</p> points!</h2>
       <div className="summary__container">
         {wrongAnswers.length > 0 
           ? <>
-            <h3 className="summary__sub-header">You need to work on these:</h3>
+            <h3 className="summary__sub-header">You are oblivious of these food cultures:</h3>
             {wrongAnswers.map((answer) => (
               <p className="summary__text">{answer.question.cuisine}</p>))}
           </>
-          : <p>Congrats! Welldone!</p>
+          : <p className="summary__text">Cool! You know all about food culture!</p>
         }
       </div>
     </>
