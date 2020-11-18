@@ -27,10 +27,11 @@
   font-size: 2em;
   margin-top: 50px;
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 @media (min-width: 900px) {
-    .start__gif {
-        width: 50%;
-      }
+  .start__gif {
+    width: 50%;
+  }
 }
