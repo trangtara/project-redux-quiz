@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
+import QuestionGif from './QuestionGif';
 import CurrentQuestion from './CurrentQuestion';
 import CurrentAnswers from './CurrentAnswers';
 import ProgressBar from './ProgressBar';
@@ -12,6 +13,7 @@ const QuestionPage = () => {
     <>
       {!isQuizOver &&
       <>
+        <QuestionGif />
         <CurrentQuestion />
         <CurrentAnswers />
         <ProgressBar />

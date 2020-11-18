@@ -1,11 +1,10 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 import SummaryPage from './SummaryPage';
 import QuestionPage from './QuestionPage';
 import Button from './Button';
-import { useSelector, useDispatch } from 'react-redux';
 import { quiz } from '../reducers/quiz'
-
 import '../styling/summary.css'
 
 const StartPage = () => {
@@ -14,7 +13,6 @@ const StartPage = () => {
 
 const handleClick = () => {
   dispatch(quiz.actions.start())
-  console.log('haj')
 }
 
 return (

@@ -1,11 +1,10 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 import Button from './Button';
 import SummaryText from './SummaryText';
-import { useSelector, useDispatch } from 'react-redux';
-import { quiz } from '../reducers/quiz'
-
-import '../styling/summary.css'
+import { quiz } from '../reducers/quiz';
+import '../styling/summary.css';
 
 const SummaryPage = () => {
   const isQuizOver = useSelector((state) => state.quiz.quizOver);
