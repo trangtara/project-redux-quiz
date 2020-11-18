@@ -6,7 +6,6 @@
 }
 
 .answer__btn, .answer__btn_wrong, .answer__btn_correct {
-  border: none;
   border-radius: 8px;
   width: 250px;
   margin: 5px;
