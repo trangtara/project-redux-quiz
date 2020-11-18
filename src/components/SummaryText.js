@@ -22,7 +22,7 @@ const SummaryText = () => {
         }
       </div>
     </>
-  )
+  );
 };
 
 export default SummaryText;

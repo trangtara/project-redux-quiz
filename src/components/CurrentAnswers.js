@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { quiz } from '../reducers/quiz'
-import Button from './Button'
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
-import '../styling/answer.css'
+import { quiz } from '../reducers/quiz';
+import Button from './Button';
+import '../styling/answer.css';
 
 const CurrentAnswers = () => {
   const answers = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex].options);
@@ -13,13 +13,13 @@ const CurrentAnswers = () => {
   const dispatch = useDispatch();
   const [isAnswered, setIsAnswered] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
-  const[userAnswerIndex, setUserAnswerIndex] = useState(-1);
+  const [userAnswerIndex, setUserAnswerIndex] = useState(-1);
 
   const checkIfCorrect = (answerIndex) => {
     if (answerIndex === correctAnswerIndex) {
       return true;
     } else return false;
-  }
+  };
 
   const handleClick = (answerIndex) => {
     console.log(answerIndex);
@@ -29,22 +29,20 @@ const CurrentAnswers = () => {
     setIsCorrect(checkIfCorrect(answerIndex));
     setIsAnswered(true);
     dispatch(quiz.actions.setScore({ increaseScore: checkIfCorrect(answerIndex) }));
-  }
+  };
 
   const handleNextButtonClick = () => {
     dispatch(quiz.actions.goToNextQuestion());
     setIsAnswered(false);
     setUserAnswerIndex(-1);
-  }
+  };
 
   return (
     <div className="answer__wrapper">
-      
-      { !isCorrect && isAnswered
-      && <div className="answer__container">
+      {!isCorrect && isAnswered &&
+      <div className="answer__container">
         <p className="answer__text">The correct answer is "{answers[correctAnswerIndex]}"</p>
-      </div>
-      }
+      </div>}
       {answers.map((answer, index) => (
         <Button
           key={index}

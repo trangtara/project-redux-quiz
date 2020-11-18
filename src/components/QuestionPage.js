@@ -21,7 +21,7 @@ const QuestionPage = () => {
         <ProgressBar />
       </>}
     </>
-  )
-}
+  );
+};
 
 export default QuestionPage;

@@ -11,23 +11,23 @@ const StartPage = () => {
   const isQuizStarted = useSelector((state) => state.quiz.quizStarted);
   const dispatch = useDispatch();
 
-const handleClick = () => {
-  dispatch(quiz.actions.start())
-}
-
-return (
-  <>
-  {!isQuizStarted ? 
-  <>
-    <h2 className='start__header'>Hello</h2>
-    <Button text='Start quiz' className='start__btn' onClick={() => handleClick()} />
-    </> : <> 
-    <QuestionPage />
-    <SummaryPage />
-    </>
+  const handleClick = () => {
+    dispatch(quiz.actions.start())
   }
-  </>
-)
-}
+
+  return (
+    <>
+      {!isQuizStarted ?
+        <>
+          <h2 className='start__header'>Hello</h2>
+          <Button text='Start quiz' className='start__btn' onClick={() => handleClick()} />
+        </> :
+        <>
+          <QuestionPage />
+          <SummaryPage />
+        </>}
+    </>
+);
+};
 
 export default StartPage;

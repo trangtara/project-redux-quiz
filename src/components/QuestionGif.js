@@ -5,14 +5,11 @@ import { useSelector } from 'react-redux';
 const QuestionGif = () => {
   const gif = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex].URL);
 
-
-return (
-<div className='gif__wrapper'>
-  <img className='gif__img' src={gif} alt='gif'/>
-</div>
-
-)
-
-}
+  return (
+    <div className='gif__wrapper'>
+      <img className='gif__img' src={gif} alt='gif'/>
+    </div>
+  );
+};
 
 export default QuestionGif;
