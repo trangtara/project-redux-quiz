@@ -3,8 +3,7 @@ import { Provider } from 'react-redux';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { quiz } from 'reducers/quiz';
 
-import SummaryPage from './components/SummaryPage';
-import QuestionPage from './components/QuestionPage';
+import StartPage from './components/StartPage';
 
 import './styling/app.css'
 
@@ -18,8 +17,7 @@ export const App = () => {
   return (
     <Provider store={store}>
       <main className="app__grid">
-        <QuestionPage />
-        <SummaryPage />
+        <StartPage />
       </main>
     </Provider>
   )

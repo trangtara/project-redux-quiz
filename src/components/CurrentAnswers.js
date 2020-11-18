@@ -40,6 +40,7 @@ const CurrentAnswers = () => {
     <div className="answer__wrapper">
       {answers.map((answer, index) => (
         <Button
+        key={index}
           onClick={() => handleClick(index)}
           className={(isCorrect && index === userAnswerIndex) ? 'answer__btn_correct' : (!isCorrect && index === userAnswerIndex ? 'answer__btn_wrong': 'answer__btn')}
           text={answer} 
