@@ -10,6 +10,7 @@ const CurrentAnswers = () => {
   const answers = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex].options);
   const currentQuestionId = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex].id);
   const correctAnswerIndex = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex].correctAnswerIndex);
+  
   const dispatch = useDispatch();
   const [isAnswered, setIsAnswered] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
@@ -35,12 +36,12 @@ const CurrentAnswers = () => {
     setIsAnswered(false);
     setUserAnswerIndex(-1);
   }
-//  className={!isAnswered ? 'answer__btn' : ((isCorrect && index === userAnswerIndex) ? 'answer__btn_correct' : (!isCorrect && index === userAnswerIndex ? 'answer__btn_wrong': 'answer__btn'))}
+
   return (
     <div className="answer__wrapper">
       {answers.map((answer, index) => (
         <Button
-        key={index}
+          key={index}
           onClick={() => handleClick(index)}
           className={(isCorrect && index === userAnswerIndex) ? 'answer__btn_correct' : (!isCorrect && index === userAnswerIndex ? 'answer__btn_wrong': 'answer__btn')}
           text={answer} 

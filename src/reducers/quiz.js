@@ -11,7 +11,8 @@ const initialState = {
   answers: [],
   currentQuestionIndex: 0,
   quizStarted: false,
-  quizOver: false
+  quizOver: false,
+  score: 0
 }
 
 export const quiz = createSlice({
@@ -72,6 +73,11 @@ export const quiz = createSlice({
 
     start: (state) => {
       state.quizStarted = true;
+    },
+
+    setScore: (state, action) => {
+      const { increaseScore } = action.payload
+      if (increaseScore) { state.score += 1 } else { state.score -= 1 }
     },
 
     /**
