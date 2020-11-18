@@ -1,0 +1,36 @@
+.start__wrapper {
+  justify-self: center;
+  text-align: center;
+  background: #f4f4f4;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.start__header {
+  font-size: 2.4em;
+  font-family: 'Roboto';
+  margin-top: 20%;
+}
+
+.start__gif {
+  width: 80%;
+}
+
+.start__btn {
+  border-radius: 8px;
+  width: 250px;
+  padding: 5px;
+  border: 2px solid #2371a4;
+  font-size: 2em;
+  margin-top: 50px;
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 900px) {
+    .start__gif {
+        width: 50%;
+      }
+}
