@@ -21,11 +21,14 @@ const StartPage = () => {
       {!isQuizStarted ? (
         <section className='start__wrapper'>
           <h1 className='start__header'>How good is your knowledge about food culture?</h1>
-          <img
-            className='start__gif'
+         <div className="gif__wrapper">
+         <img
+            className='gif__img'
             src={'https://media.giphy.com/media/lyGMZjgOA1dXa/giphy.gif'}
             alt='GIF of Sookie drinking cocktail'
           />
+         </div>
+         
           <Button
             text='Start quiz'
             className='start__btn'
